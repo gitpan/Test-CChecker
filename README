@@ -5,7 +5,7 @@ NAME
 
 VERSION
 
-    version 0.04
+    version 0.05
 
 SYNOPSIS
 
@@ -69,6 +69,9 @@ FUNCTIONS
 
     You can have it report the output on success with
     #compile_output_to_diag or #compile_output_to_note.
+
+    In addition to the pass/fail and diagnostic output, this function will
+    return true or false on success and failure respectively.
 
  compile_with_alien
 

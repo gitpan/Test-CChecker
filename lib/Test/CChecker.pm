@@ -21,7 +21,7 @@ our @EXPORT = qw(
 );
 
 # ABSTRACT: test-time utilities for checking C headers, libraries, or OS features
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 
 do {
@@ -58,6 +58,8 @@ sub compile_run_ok ($;$)
   {
     $tb->note($out);
   }
+  
+  $ok;
 }
 
 
@@ -123,7 +125,7 @@ Test::CChecker - test-time utilities for checking C headers, libraries, or OS fe
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -186,6 +188,9 @@ L<Test::More> C<diag>.
 
 You can have it report the output on success with L<#compile_output_to_diag>
 or L<#compile_output_to_note>.
+
+In addition to the pass/fail and diagnostic output, this function
+will return true or false on success and failure respectively.
 
 =head2 compile_with_alien
 
